@@ -1,0 +1,86 @@
+%%%% =============================================================================
+%%%% [T] THEORY: BYZANTINE-ML FOUNDATIONS AND GUARANTEES
+%%%% Cited in the introduction for the theoretical-guarantee landscape.
+%%%%
+%%%% Keys must not be renamed -- cited throughout the mémoire. Secondary
+%%%% roles are listed in trailing comments ("Roles:").
+%%%% =============================================================================
+
+@inproceedings{chen2018distributed,
+  title={Distributed statistical machine learning in adversarial settings: Byzantine gradient descent},
+  author={Chen, Yudong and Su, Lili and Xu, Jiaming},
+  booktitle={Abstracts of the 2018 ACM International Conference on Measurement and Modeling of Computer Systems},
+  pages={96--96},
+  year={2018}
+}
+% Roles: [T] analysis of Byzantine gradient descent (Krum guarantees).
+
+@article{hsu2019measuring,
+  title={Measuring the effects of non-identical data distribution for federated visual classification},
+  author={Hsu, Tzu-Ming Harry and Qi, Hang and Brown, Matthew},
+  journal={arXiv preprint arXiv:1909.06335},
+  year={2019}
+}
+% Roles: [T] Dirichlet non-IID partitioning baseline (ch. 4, DirichletPartitioner).
+@article{robbins1951stochastic,
+  author    = {Herbert Robbins and Sutton Monro},
+  title     = {A Stochastic Approximation Method},
+  journal   = {The Annals of Mathematical Statistics},
+  year      = {1951},
+  volume    = {22},
+  number    = {3},
+  pages     = {400--407},
+  doi       = {10.1214/aoms/1177729586},
+  url       = {https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-22/issue-3/A-Stochastic-Approximation-Method/10.1214/aoms/1177729586.full},
+}
+% Roles: [T] Robbins-Monro conditions on the learning-rate schedule.
+
+@inproceedings{glorot2010understanding,
+  author    = {Xavier Glorot and Yoshua Bengio},
+  title     = {Understanding the Difficulty of Training Deep Feedforward Neural Networks},
+  booktitle = {Proceedings of the 13th International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year      = {2010},
+  volume    = {9},
+  pages     = {249--256},
+  publisher = {PMLR},
+  url       = {https://proceedings.mlr.press/v9/glorot10a.html},
+}
+% Roles: [T] Xavier initialization (cited in ch. 3, one clause, no theory).
+
+@article{lamport1982byzantine,
+  author  = {Leslie Lamport and Robert Shostak and Marshall Pease},
+  title   = {The Byzantine Generals Problem},
+  journal = {ACM Transactions on Programming Languages and Systems},
+  year    = {1982},
+  volume  = {4},
+  number  = {3},
+  pages   = {382--401},
+}
+% Roles: [T] origin of the byzantine term (ch. 3, glossary).
+
+@article{bareilles2026optimal,
+  title   = {Byzantine Machine Learning: MultiKrum and an optimal notion of robustness},
+  author  = {Bareilles, Gilles and Bouaziz, Wassim and Fageot, Julien and El-Mhamdi, El-Mahdi},
+  journal = {arXiv preprint arXiv:2602.03899},
+  year    = {2026}
+}
+% Roles: [T] optimal robustness coefficient κ* of aggregation rules
+%        (ch. 7, travaux futurs, premier projet de thèse).
+
+@article{mengoli2025signsgd,
+  title   = {On the Byzantine Fault Tolerance of {signSGD} with Majority Vote},
+  author  = {Mengoli, Emanuele and Moll, Luzius and Strozzi, Virgilio and El-Mhamdi, El-Mahdi},
+  journal = {arXiv preprint arXiv:2502.19170},
+  year    = {2025}
+}
+% Roles: [T] BFT of signSGD majority vote against omniscient colluding
+%        adversaries (ch. 7, travaux futurs, campagne signSGD).
+
+@inproceedings{allouah2023fixing,
+  title     = {Fixing by mixing: A recipe for optimal {Byzantine} {ML} under heterogeneity},
+  author    = {Allouah, Youssef and Farhadkhani, Sadegh and Guerraoui, Rachid and Gupta, Nirupam and Pinot, Rafa{\"e}l and Stephan, John},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  pages     = {1232--1300},
+  year      = {2023},
+  publisher = {PMLR}
+}

@@ -1,0 +1,62 @@
+%%%% =============================================================================
+%%%% [P] SEMINAL PROTOCOLS REPRODUCED BY THE SIMULATION LAYER
+%%%% The NeurIPS 2017 and ICML 2018 protocols are centralised
+%%%% (parameter-server); the ICML 2023 protocol is decentralised (MoNNA,
+%%%% peer-to-peer). Reproduced with exact training conditions: learning-rate
+%%%% schedule, initialization, weight decay and attack schedule.
+%%%%
+%%%% Keys must not be renamed -- cited throughout the mémoire. Secondary
+%%%% roles are listed in trailing comments ("Roles:").
+%%%% =============================================================================
+
+@inproceedings{blanchard2017machine,
+  author    = {Peva Blanchard and El-Mahdi El-Mhamdi and Rachid Guerraoui and Julien Stainer},
+  title     = {Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NIPS)},
+  year      = {2017},
+  volume    = {30},
+  url       = {https://arxiv.org/abs/1703.02757},
+}
+% Roles: [P] NeurIPS 2017 protocol; [A] source of Krum and MultiKrum;
+%        [T] resilience condition n >= 2f+3.
+
+@inproceedings{elmhamdi2018hidden,
+  author    = {El-Mahdi El-Mhamdi and Rachid Guerraoui and S{\'e}bastien Rouault},
+  title     = {The Hidden Vulnerability of Distributed Learning in Byzantium},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  year      = {2018},
+  volume    = {80},
+  pages     = {3521--3530},
+  publisher = {PMLR},
+  url       = {https://arxiv.org/abs/1802.07927},
+}
+% Roles: [P] ICML 2018 protocol; [A] source of Bulyan and Brute;
+%        [X] source of the FullGradientNegation and SmallPerturbation attacks;
+%        [T] hidden vulnerability of Krum-like rules.
+
+@inproceedings{farhadkhani2023monna,
+  author    = {Sadegh Farhadkhani and Rachid Guerraoui and Nirupam Gupta
+               and L{\^e} Nguy{\^e}n Hoang and Rafael Pinot and John Stephan},
+  title     = {Robust Collaborative Learning with Linear Gradient Overhead},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+  year      = {2023},
+  volume    = {202},
+  publisher = {PMLR},
+  url       = {https://arxiv.org/abs/2209.10931},
+}
+% Roles: [P] ICML 2023 MoNNA decentralised protocol (all/sampled Byzantine
+%        reach); [A] source of NNA (Nearest Neighbor Average);
+%        [T] linear gradient overhead guarantee.
+
+@inproceedings{elmhamdi2021jungle,
+  author    = {El-Mahdi El-Mhamdi and Sadegh Farhadkhani and Rachid Guerraoui
+               and Alexandre Guirguis and L{\^e} Nguy{\^e}n Hoang and S{\'e}bastien Rouault},
+  title     = {Collaborative Learning in the Jungle (Decentralized, Byzantine, Heterogeneous, Asynchronous and Nonconvex Learning)},
+  booktitle = {Advances in Neural Information Processing Systems 34 (NeurIPS)},
+  year      = {2021},
+  volume    = {34},
+  pages     = {25044--25057},
+  url       = {https://proceedings.neurips.cc/paper/2021/hash/d2cd33e9c0236a8c2d8bd3fa91ad3acf-Abstract.html},
+}
+% Roles: [P] decentralised, Byzantine, heterogeneous, asynchronous protocol
+%        (context: thesis offer, chaire ref. [11]; not reproduced).

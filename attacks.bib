@@ -1,0 +1,147 @@
+%%%% =============================================================================
+%%%% [X] ATTACK STRATEGIES IMPLEMENTED IN THE PRIMITIVES LAYER
+%%%% Sources of the attacks listed in Appendix "Implemented Algorithms".
+%%%% The FullGradientNegation and SmallPerturbation attacks are defined in
+%%%% elmhamdi2018hidden (see [P] protocols.bib).
+%%%%
+%%%% Keys must not be renamed -- cited throughout the mémoire. Secondary
+%%%% roles are listed in trailing comments ("Roles:").
+%%%% =============================================================================
+
+@inproceedings{baruch2019alie,
+  author    = {Gilad Baruch and Moran Baruch and Yoav Goldberg},
+  title     = {A Little Is Enough: Circumventing Defenses For Distributed Learning},
+  booktitle = {Advances in Neural Information Processing Systems 32 (NeurIPS)},
+  year      = {2019},
+  volume    = {32},
+  url       = {https://arxiv.org/abs/1902.06156},
+}
+% Roles: [X] source of the ALIE attack.
+
+@inproceedings{xie2019fall,
+  author    = {Cong Xie and Sanmi Koyejo and Indranil Gupta},
+  title     = {Fall of Empires: Breaking {Byzantine}-tolerant {SGD} by Inner Product Manipulation},
+  booktitle = {Proceedings of the 35th Uncertainty in Artificial Intelligence Conference (UAI)},
+  year      = {2020},
+  volume    = {115},
+  pages     = {261--270},
+  publisher = {PMLR},
+  url       = {https://arxiv.org/abs/1903.03936},
+}
+% Roles: [X] source of the SignFlip attack (inner product manipulation).
+
+@inproceedings{biggio2012poisoning,
+  author    = {Battista Biggio and Blaine Nelson and Pavel Laskov},
+  title     = {Poisoning Attacks against Support Vector Machines},
+  booktitle = {Proceedings of the 29th International Conference on Machine Learning (ICML)},
+  year      = {2012},
+  pages     = {1467--1474},
+  publisher = {Omnipress},
+}
+% Roles: [X] prototype of untargeted (availability) data poisoning.
+
+@inproceedings{alfeld2016poisoning,
+  author    = {Scott Alfeld and Xiaojin Zhu and Paul Barford},
+  title     = {Data Poisoning Attacks against Autoregressive Models},
+  booktitle = {Proceedings of the 30th AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2016},
+  pages     = {1452--1458},
+  url       = {https://ojs.aaai.org/index.php/AAAI/article/view/10237},
+}
+% Roles: [X] historical poisoning attack (context: thesis offer, chaire ref. [1]).
+
+@misc{gu2017badnets,
+  author    = {Tianyu Gu and Brendan Dolan-Gavitt and Siddharth Garg},
+  title     = {{BadNets}: Identifying Vulnerabilities in the Machine Learning Model Supply Chain},
+  year      = {2017},
+  publisher = {arXiv},
+}
+% Roles: [X] prototype of targeted backdoor attacks (trigger, clean accuracy preserved).
+
+@inproceedings{bagdasaryan2020backdoor,
+  author    = {Eugene Bagdasaryan and Andreas Veit and Yiqing Hua and Deborah Estrin and Vitaly Shmatikov},
+  title     = {How To Backdoor Federated Learning},
+  booktitle = {Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year      = {2020},
+  volume    = {108},
+  pages     = {2938--2948},
+  publisher = {PMLR},
+}
+% Roles: [X] backdoor in federated learning (data-time threat).
+
+@inproceedings{sablayrolles2020radioactive,
+  author    = {Alexandre Sablayrolles and Matthijs Douze and Cordelia Schmid and Herv{\'e} J{\'e}gou},
+  title     = {Radioactive Data: Tracing Through Training},
+  booktitle = {Proceedings of the 37th International Conference on Machine Learning (ICML)},
+  year      = {2020},
+  volume    = {119},
+  pages     = {8326--8335},
+  publisher = {PMLR},
+}
+% Roles: [X] dataset marking for later auditing (closest published proxy for data taggants).
+
+@inproceedings{bouaziz2024taggants,
+  author    = {Wassim Bouaziz and Nicolas Usunier and El-Mahdi El-Mhamdi},
+  title     = {Data Taggants: Dataset Ownership Verification Via Harmless Targeted Data Poisoning},
+  booktitle = {Proceedings of the 13th International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=6ldD8Y4gBQ},
+}
+% Roles: [X] data taggants (harmless targeted poisoning, black-box statistical certificate).
+
+@inproceedings{bouaziz2025audio,
+  author    = {Wassim Bouaziz and El-Mahdi El-Mhamdi and Nicolas Usunier},
+  title     = {Targeted Data Poisoning for Black-Box Audio Datasets Ownership Verification},
+  booktitle = {2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year      = {2025},
+  pages     = {1--5},
+  doi       = {10.1109/ICASSP49660.2025.10888515},
+  url       = {https://arxiv.org/abs/2503.10269},
+}
+% Roles: [X] taggants adapted to audio (SpeechCommands, ESC50).
+
+@inproceedings{bouaziz2026wintersoldier,
+  author    = {Wassim Bouaziz and Mathurin Videau and Nicolas Usunier and El-Mahdi El-Mhamdi},
+  title     = {Winter Soldier: Backdooring Language Models at Pre-Training with Indirect Data Poisoning},
+  booktitle = {Proceedings of the International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  url       = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/4830a9b95a2f63fc4b3fe09abc18f045-Abstract-Conference.html},
+}
+% Roles: [X] DoV by indirect poisoning at pre-training (extends data taggants to LLMs;
+%        context: thesis offer, chaire ref. [7]).
+
+@article{elkabid2026labelflip,
+  author    = {Abdessamad El-Kabid and El-Mahdi El-Mhamdi},
+  title     = {Approaching the Harm of Gradient Attacks While Only Flipping Labels},
+  journal   = {Transactions on Machine Learning Research},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=eAqBcljvsU},
+}
+% Roles: [X] availability via constrained label flipping (per-epoch optimal greedy rule, transfers to median/trimmed mean).
+
+@article{bouaziz2025inverting,
+  author    = {Wassim Bouaziz and El-Mahdi El-Mhamdi and Nicolas Usunier},
+  title     = {Inverting Gradient Attacks Makes Powerful Data Poisoning},
+  journal   = {Transactions on Machine Learning Research},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=Lvy5MjyTh3},
+}
+% Roles: [X] targeted poisoning via gradient inversion (context: thesis offer, chaire ref. [5]).
+
+@misc{xie2020dba,
+  author    = {Chulin Xie and Keli Huang and Pin-Yu Chen and Bo Li},
+  title     = {{DBA}: Distributed Backdoor Attacks against Federated Learning},
+  year      = {2020},
+}
+% Roles: [X] distributed backdoor (global trigger split into local triggers).
+
+@inproceedings{meeus2025sok,
+  author    = {Matthieu Meeus and Igor Shilov and Shubham Jain and Manuel Faysse
+               and Marek Rei and Yves-Alexandre de Montjoye},
+  title     = {{SoK}: Membership Inference Attacks on {LLMs} Are Rushing Nowhere (and How to Fix It)},
+  booktitle = {2025 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)},
+  year      = {2025},
+  pages     = {385--401},
+  url       = {https://arxiv.org/abs/2406.17975},
+}
+% Roles: [X] data-usage detection side of DoV (context: thesis offer, chaire ref. [18]).

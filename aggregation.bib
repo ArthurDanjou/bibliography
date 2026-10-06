@@ -1,0 +1,116 @@
+%%%% =============================================================================
+%%%% [A] AGGREGATION RULES IMPLEMENTED IN THE PRIMITIVES LAYER
+%%%% Sources of the rules listed in Appendix "Implemented Algorithms",
+%%%% plus pre-aggregation techniques currently absent from Krum
+%%%% (future work: bucketing, client weighting).
+%%%%
+%%%% Keys must not be renamed -- cited throughout the mémoire. Secondary
+%%%% roles are listed in trailing comments ("Roles:").
+%%%% =============================================================================
+
+@inproceedings{yin2018byzantine,
+  author    = {Dong Yin and Yudong Chen and Kannan Ramchandran and Peter Bartlett},
+  title     = {Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  year      = {2018},
+  volume    = {80},
+  pages     = {5650--5659},
+  publisher = {PMLR},
+  url       = {https://arxiv.org/abs/1803.01498},
+}
+% Roles: [A] source of Median and TrimmedMean.
+
+@article{pillutla2022robust,
+  author    = {Krishna Pillutla and Sham M. Kakade and Zaid Harchaoui},
+  title     = {Robust Aggregation for Federated Learning},
+  journal   = {IEEE Transactions on Signal Processing},
+  year      = {2022},
+  volume    = {70},
+  pages     = {1142--1154},
+  doi       = {10.1109/TSP.2022.3153135},
+  url       = {https://arxiv.org/abs/1912.13445},
+}
+% Roles: [A] source of the geometric median (RFA, Weiszfeld computation).
+
+@article{weiszfeld1937point,
+  author    = {Endre Weiszfeld},
+  title     = {Sur le point pour lequel la somme des distances de n points donn{\'e}s est minimum},
+  journal   = {Tohoku Mathematical Journal, First Series},
+  year      = {1937},
+  volume    = {43},
+  pages     = {355--386},
+}
+% Roles: [A] original Weiszfeld algorithm for the geometric median.
+
+@article{xie2018generalized,
+  title={Generalized Byzantine-tolerant SGD},
+  author={Xie, Cong and Koyejo, Oluwasanmi and Gupta, Indranil},
+  journal={arXiv preprint arXiv:1802.10116},
+  year={2018}
+}
+% Roles: [A] source of the Medoid definition (Definition 9, efficient variant
+%        of the geometric median restricted to submitted vectors).
+
+@inproceedings{boussetta2020aksel,
+  author    = {Amine Boussetta and El-Mahdi El-Mhamdi and Rachid Guerraoui and Alexandre Maurer and S{\'e}bastien Rouault},
+  title     = {{AKSEL}: Fast {Byzantine} {SGD}},
+  booktitle = {24th International Conference on Principles of Distributed Systems (OPODIS 2020)},
+  year      = {2021},
+  series    = {Leibniz International Proceedings in Informatics (LIPIcs)},
+  volume    = {184},
+  pages     = {8:1--8:16},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  doi       = {10.4230/LIPIcs.OPODIS.2020.8},
+  url       = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.OPODIS.2020.8},
+}
+% Roles: [A] source of Aksel (pivot-based, O(nd)).
+
+@article{wang2025federated,
+  title={Federated learning framework based on trimmed mean aggregation rules},
+  author={Wang, Tianxiang and Zheng, Zhonglong and Lin, Feilong},
+  journal={Expert Systems with Applications},
+  volume={270},
+  pages={126354},
+  year={2025},
+  publisher={Elsevier}
+}
+% Roles: [A] recent trimmed-mean aggregation framework.
+
+@article{karimireddy2020byzantine,
+  title={Byzantine-robust learning on heterogeneous datasets via bucketing},
+  author={Karimireddy, Sai Praneeth and He, Lie and Jaggi, Martin},
+  journal={arXiv preprint arXiv:2006.09365},
+  year={2020}
+}
+% Roles: [A] bucketing; pre-aggregation technique, candidate for future work.
+
+@article{portnoy2022towards,
+  title={Towards federated learning with byzantine-robust client weighting},
+  author={Portnoy, Amit and Tirosh, Yoav and Hendler, Danny},
+  journal={Applied Sciences},
+  volume={12},
+  number={17},
+  pages={8847},
+  year={2022},
+  publisher={MDPI}
+}
+% Roles: [A] client-weighting aggregation.
+
+@inproceedings{bernstein2019signsgd,
+  author    = {Jeremy Bernstein and Jiawei Zhao and Kamyar Azizzadenesheli and Anima Anandkumar},
+  title     = {{signSGD} with Majority Vote is Communication Efficient And Fault Tolerant},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019},
+  url       = {https://arxiv.org/abs/1810.05291},
+}
+% Roles: [A] signSGD majority vote, 1-bit compression; rule planned for
+%        future work (ch. 7, travaux futurs).
+
+@inproceedings{bernstein2018signsgd,
+  title     = {{signSGD}: Compressed optimisation for non-convex problems},
+  author    = {Bernstein, Jeremy and Wang, Yu-Xiang and Azizzadenesheli, Kamyar and Anandkumar, Animashree},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  pages     = {560--569},
+  year      = {2018},
+  publisher = {PMLR}
+}

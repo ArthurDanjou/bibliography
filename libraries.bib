@@ -1,0 +1,74 @@
+%%%% =============================================================================
+%%%% [L] COMPARED LIBRARIES AND THEIR COMPANION PAPERS
+%%%% The five systems compared against Krum in the comparison section (ch. 7).
+%%%% Counts cited there follow each library's own taxonomy (as of August 2026).
+%%%%
+%%%% Keys must not be renamed -- cited throughout the mémoire. Secondary
+%%%% roles are listed in trailing comments ("Roles:").
+%%%% =============================================================================
+
+@misc{byzfl,
+  author       = {Marc Gonz{\'a}lez and Rachid Guerraoui and Rafael Pinot
+                  and Geovani Rizk and John Stephan and Fran{\c{c}}ois Ta{\"i}ani},
+  title        = {{ByzFL}: Research Framework for Robust Federated Learning},
+  year         = {2025},
+  howpublished = {arXiv:2505.24802},
+  url          = {https://arxiv.org/abs/2505.24802},
+}
+% Roles: [L] closest competitor: 12+4 pre-aggregators, 9 attacks, JSON configs,
+%        parameter-server only.
+
+@article{fedlab,
+  author  = {Dun Zeng and Siqi Liang and Xiangjing Hu and Hui Wang and Zenglin Xu},
+  title   = {{FedLab}: A Flexible Federated Learning Framework},
+  journal = {Journal of Machine Learning Research},
+  year    = {2023},
+  volume  = {24},
+  number  = {100},
+  pages   = {1--7},
+  url     = {https://www.jmlr.org/papers/v24/22-0440.html},
+}
+% Roles: [L] JMLR precedent: ten generic FL baselines, no Byzantine resilience.
+
+@inproceedings{blades,
+  author    = {Shenghui Li and Edith Ngai and Fanghua Ye and Li Ju
+               and Tianru Zhang and Thiemo Voigt},
+  title     = {{Blades}: A Unified Benchmark Suite for {Byzantine} Attacks
+               and Defenses in Federated Learning},
+  booktitle = {Proceedings of the ACM/IEEE International Conference on
+               Internet of Things Design and Implementation (IoTDI)},
+  year      = {2024},
+  pages     = {158--169},
+  url       = {https://arxiv.org/abs/2206.05359},
+}
+% Roles: [L] benchmark suite driven by Ray Tune.
+
+@article{ozfatura2024rop,
+  author  = {Kerem Ozfatura and Emre Ozfatura and Alptekin Kupcu and Deniz G{\"u}nd{\"u}z},
+  title   = {Byzantines Can Also Learn From History: Fall of Centered Clipping in Federated Learning},
+  journal = {IEEE Transactions on Information Forensics and Security},
+  year    = {2024},
+  volume  = {19},
+  pages   = {2010--2022},
+  doi     = {10.1109/TIFS.2023.3345171},
+  url     = {https://ieeexplore.ieee.org/document/10484776},
+}
+% Roles: [L] companion paper of FL-Byzantine-Library; critique of centered
+%        clipping (a pre-aggregator).
+
+@misc{flbyzlib,
+  author       = {{CRYPTO-KU}},
+  title        = {{FL-Byzantine-Library}},
+  year         = {2024},
+  howpublished = {\url{https://github.com/CRYPTO-KU/FL-Byzantine-Library}},
+  note         = {Code for \cite{ozfatura2024rop}},
+}
+% Roles: [L] largest collection in the comparison: 36 aggregators, 23 attacks.
+
+@misc{byzpy,
+  author       = {{ByzPy}},
+  title        = {{ByzPy}: Byzantine-Robust Learning Runtime},
+  year         = {2025},
+  howpublished = {\url{https://github.com/Byzpy/byzpy}},
+}
+% Roles: [L] runtime with five backends; P2P support via Topology/PeerToPeer.
