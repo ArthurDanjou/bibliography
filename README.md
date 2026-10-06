@@ -2,6 +2,8 @@
 
 BibTeX references for research on Byzantine-robust distributed and federated learning, intended for use with **biblatex and biber**.
 
+This repository serves as the shared bibliography for my thesis, research papers, and reports.
+
 References are split by category. Each entry belongs to its **primary category**; secondary roles are documented in trailing `Roles:` comments. References supporting several categories are stored once and cited using the same key throughout the thesis.
 
 ## Files
