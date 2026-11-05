@@ -58,12 +58,16 @@
 }
 % Roles: [T] origin of the byzantine term (ch. 3, glossary).
 
-@article{bareilles2026optimal,
-  title   = {Byzantine Machine Learning: MultiKrum and an optimal notion of robustness},
-  author  = {Bareilles, Gilles and Bouaziz, Wassim and Fageot, Julien and El-Mhamdi, El-Mahdi},
-  journal = {arXiv preprint arXiv:2602.03899},
-  year    = {2026}
+@inproceedings{bareilles2026optimal,
+  author    = {Bareilles, Gilles and Bouaziz, Wassim and Fageot, Julien and El-Mhamdi, El-Mahdi},
+  title     = {Brief Announcement: Byzantine Machine Learning, {MultiKrum} and an Optimal Notion of Robustness},
+  booktitle = {Proceedings of the ACM Symposium on Principles of Distributed Computing (PODC)},
+  year      = {2026},
+  pages     = {220--223},
+  doi       = {10.1145/3796701.3815914},
+  note      = {Full version available at \url{https://arxiv.org/abs/2602.03899}}
 }
+
 % Roles: [T] optimal robustness coefficient κ* of aggregation rules
 %        (ch. 7, travaux futurs, premier projet de thèse).
 
@@ -73,6 +77,31 @@
   journal = {arXiv preprint arXiv:2502.19170},
   year    = {2025}
 }
+
+@article{akoun2022signsgdfaulttoleranceblindbyzantine,
+      title={SignSGD: Fault-Tolerance to Blind and Byzantine Adversaries}, 
+      author={Jason Akoun and Sebastien Meyer},
+      journal = {arXiv preprint arXiv:2202.02085},
+      year={2022},
+      eprint={2202.02085},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2202.02085}, 
+}
+
+@article{jin2024sign,
+  author={Jin, Richeng and Liu, Yuding and Huang, Yufan and He, Xiaofan and Wu, Tianfu and Dai, Huaiyu},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Sign-Based Gradient Descent With Heterogeneous Data: Convergence and Byzantine Resilience}, 
+  year={2025},
+  volume={36},
+  number={2},
+  pages={3834-3846},
+  keywords={Convergence;Resilience;Quantization (signal);Stochastic processes;Servers;Training;Distributed databases;Byzantine resilience;communication efficiency;data heterogeneity;federated learning (FL);sign-based gradient descent},
+  doi={10.1109/TNNLS.2023.3345367}
+}
+
+
 % Roles: [T] BFT of signSGD majority vote against omniscient colluding
 %        adversaries (ch. 7, travaux futurs, campagne signSGD).
 
@@ -83,4 +112,33 @@
   pages     = {1232--1300},
   year      = {2023},
   publisher = {PMLR}
+}
+
+
+%%% historical works on breakdown point from robust statistics 
+
+@article{rousseeuw1985multivariate,
+  title={Multivariate estimation with high breakdown point},
+  author={Rousseeuw, Peter J},
+  journal={Mathematical Statistics and Applications Vol. B},
+  volume={8},
+  pages={283-297},
+  year={1985},
+  isbn = {978-94-010-8901-2},
+  doi = {10.1007/978-94-009-5438-0_20}
+}
+
+% General distributed computing litterature
+
+%%%---- impossibility of asynchronous consensus
+
+@article{fischer1985impossibility,
+  title={Impossibility of distributed consensus with one faulty process},
+  author={Fischer, Michael J and Lynch, Nancy A and Paterson, Michael S},
+  journal={Journal of the ACM (JACM)},
+  volume={32},
+  number={2},
+  pages={374--382},
+  year={1985},
+  publisher={ACM, New York, NY, USA}
 }
